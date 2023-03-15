@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>排序 | 卡克</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="卡克的个人博客">
+    
+    <link rel="preload" href="/kake-blog/assets/css/0.styles.060b3ec1.css" as="style"><link rel="preload" href="/kake-blog/assets/js/app.ba41769d.js" as="script"><link rel="preload" href="/kake-blog/assets/js/3.e126f458.js" as="script"><link rel="preload" href="/kake-blog/assets/js/1.f474e8b5.js" as="script"><link rel="preload" href="/kake-blog/assets/js/29.07ed6977.js" as="script"><link rel="prefetch" href="/kake-blog/assets/js/10.ab56f7dd.js"><link rel="prefetch" href="/kake-blog/assets/js/11.22ef5694.js"><link rel="prefetch" href="/kake-blog/assets/js/12.fdcf5344.js"><link rel="prefetch" href="/kake-blog/assets/js/13.9b393b1b.js"><link rel="prefetch" href="/kake-blog/assets/js/14.0ddd8852.js"><link rel="prefetch" href="/kake-blog/assets/js/15.4ad49071.js"><link rel="prefetch" href="/kake-blog/assets/js/16.3ad6af45.js"><link rel="prefetch" href="/kake-blog/assets/js/17.90ce0ea5.js"><link rel="prefetch" href="/kake-blog/assets/js/18.857c4fed.js"><link rel="prefetch" href="/kake-blog/assets/js/19.3ca5fe1c.js"><link rel="prefetch" href="/kake-blog/assets/js/20.5299e0fe.js"><link rel="prefetch" href="/kake-blog/assets/js/21.5028024e.js"><link rel="prefetch" href="/kake-blog/assets/js/22.b38bf968.js"><link rel="prefetch" href="/kake-blog/assets/js/23.cb1f4fd3.js"><link rel="prefetch" href="/kake-blog/assets/js/24.c4bcad1f.js"><link rel="prefetch" href="/kake-blog/assets/js/25.71a6043d.js"><link rel="prefetch" href="/kake-blog/assets/js/26.b3fd8499.js"><link rel="prefetch" href="/kake-blog/assets/js/27.8ca4bb9d.js"><link rel="prefetch" href="/kake-blog/assets/js/28.d9c67b40.js"><link rel="prefetch" href="/kake-blog/assets/js/4.90ac1a62.js"><link rel="prefetch" href="/kake-blog/assets/js/5.3b7e8ac1.js"><link rel="prefetch" href="/kake-blog/assets/js/6.81544bb5.js"><link rel="prefetch" href="/kake-blog/assets/js/7.5104c8ec.js"><link rel="prefetch" href="/kake-blog/assets/js/8.46dbe6e0.js"><link rel="prefetch" href="/kake-blog/assets/js/9.247a4459.js">
+    <link rel="stylesheet" href="/kake-blog/assets/css/0.styles.060b3ec1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>卡克</h3> <p class="description" data-v-59e6cb88>卡克的个人博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/kake-blog/" class="home-link router-link-active"><!----> <span class="site-name">卡克</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/kake-blog/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      卡克的 前端博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/L1StayHungry" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>20</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/kake-blog/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      卡克的 前端博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/L1StayHungry" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/kake-blog/" class="sidebar-heading clickable router-link-active"><span>好好学习，天天向上</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/kake-blog/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/kake-blog/js/JavaScript红宝书笔记" class="sidebar-heading clickable"><span>JS整理</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/kake-blog/js/JavaScript红宝书笔记.html" class="sidebar-link">JavaScript红宝书笔记</a></li><li><a href="/kake-blog/js/原型和原型链.html" class="sidebar-link">原型和原型链</a></li><li><a href="/kake-blog/js/PromiseA+.html" class="sidebar-link">PromiseA+规范</a></li><li><a href="/kake-blog/js/实现一个Promise.html" class="sidebar-link">实现一个Promise</a></li><li><a href="/kake-blog/js/generator &amp; async await.html" class="sidebar-link">generator &amp; async await</a></li><li><a href="/kake-blog/js/变量_作用域_内存.html" class="sidebar-link">变量_作用域_内存</a></li><li><a href="/kake-blog/js/js模块化.html" class="sidebar-link">js模块化</a></li><li><a href="/kake-blog/js/数组相关.html" class="sidebar-link">数组相关</a></li><li><a href="/kake-blog/js/BOM.html" class="sidebar-link">BOM相关</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/kake-blog/css/CSS" class="sidebar-heading clickable"><span>CSS整理</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/kake-blog/html/H5" class="sidebar-heading clickable"><span>HTML整理</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/kake-blog/vue2/vue知识点" class="sidebar-heading clickable"><span>vue2</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/kake-blog/browser/浏览器相关" class="sidebar-heading clickable"><span>浏览器相关</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/kake-blog/进阶/常见算法" class="sidebar-heading clickable open active"><span>进阶</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/kake-blog/进阶/常见算法.html" class="active sidebar-link">常见算法</a></li><li><a href="/kake-blog/进阶/前端工程化.html" class="sidebar-link">前端工程化</a></li><li><a href="/kake-blog/进阶/MVC、MVP、MVVM模式.html" class="sidebar-link">MVC、MVP、MVVM模式</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">排序</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="排序"><a href="#排序" class="header-anchor">#</a> 排序</h2> <h4 id="快速排序"><a href="#快速排序" class="header-anchor">#</a> 快速排序</h4> <ul><li><p>思路</p> <ul><li>取基数，分区</li></ul></li> <li><p>实现</p> <ul><li><p>我的实现：在原有数组上操作</p></li> <li><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">quickSort</span><span class="token punctuation">(</span><span class="token parameter">arr<span class="token punctuation">,</span> parentLeftIndex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> parentRightIndex <span class="token operator">=</span> arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 是否满足排序基本条件</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>parentLeftIndex <span class="token operator">&gt;=</span> parentRightIndex<span class="token punctuation">)</span> <span class="token keyword">return</span>
+
+  <span class="token keyword">let</span> leftIndex <span class="token operator">=</span> parentLeftIndex
+  <span class="token keyword">let</span> rightIndex <span class="token operator">=</span> parentRightIndex
+  
+  <span class="token comment">// 取基数。我取最后一个数为基数</span>
+  <span class="token keyword">const</span> target <span class="token operator">=</span> arr<span class="token punctuation">[</span>rightIndex<span class="token punctuation">]</span>
+  <span class="token comment">// 分区</span>
+  <span class="token keyword">while</span><span class="token punctuation">(</span>leftIndex <span class="token operator">&lt;</span> rightIndex<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 因为取的最后一个数为基数，所以从左边开始遍历</span>
+    <span class="token comment">// 找到第一个比基数大的数，放到无效位置处，此时无效位置为arr[rightIndex]</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>leftIndex <span class="token operator">&lt;</span> rightIndex <span class="token operator">&amp;&amp;</span> arr<span class="token punctuation">[</span>leftIndex<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> target<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      leftIndex<span class="token operator">++</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 找到了，没找到也不会有影响，大不了原地赋值</span>
+    arr<span class="token punctuation">[</span>rightIndex<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>leftIndex<span class="token punctuation">]</span>
+    <span class="token comment">// 此时无效数据为arr[leftIndex]</span>
+
+    <span class="token comment">// 找到第一个比基数小的数，放到无效位置处，此时无效位置为arr[rightIndex]</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>leftIndex <span class="token operator">&lt;</span> rightIndex <span class="token operator">&amp;&amp;</span> arr<span class="token punctuation">[</span>rightIndex<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> target<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      rightIndex<span class="token operator">--</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 找到了，没找到也不会有影响，大不了原地赋值</span>
+    arr<span class="token punctuation">[</span>leftIndex<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>rightIndex<span class="token punctuation">]</span>
+    <span class="token comment">// 此时无效数据为arr[rightIndex]</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 将基数放到上述无效数据处就完成了分区</span>
+  arr<span class="token punctuation">[</span>rightIndex<span class="token punctuation">]</span> <span class="token operator">=</span> target
+
+  <span class="token comment">// 分区排序</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>rightIndex <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">-</span> parentLeftIndex <span class="token operator">&gt;=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">quickSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> parentLeftIndex<span class="token punctuation">,</span> rightIndex <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span> parentRightIndex <span class="token operator">-</span> <span class="token punctuation">(</span>rightIndex <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&gt;=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">quickSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> rightIndex <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> parentRightIndex<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> arr
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">]</span>
+<span class="token comment">// [6,  7,  8,  9,10, 11, 17, 22]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'结果'</span><span class="token punctuation">,</span> <span class="token function">quickSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li><p>其实可以新增两数组，操作简单很多，但是数据量大的话就显得比较蠢</p></li></ul></li></ul> <h4 id="冒泡排序"><a href="#冒泡排序" class="header-anchor">#</a> 冒泡排序</h4> <ul><li><p>思路</p> <ul><li><p>每次排序把最大的数放在最后</p></li> <li><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">sortM</span><span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>arr<span class="token punctuation">.</span>length <span class="token operator">||</span> arr<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> arr
+  <span class="token keyword">const</span> len <span class="token operator">=</span> arr<span class="token punctuation">.</span>length
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">const</span> i <span class="token keyword">in</span> arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> len <span class="token operator">-</span> i <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> arr
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">sortM</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li></ul></li></ul> <h4 id="选择排序"><a href="#选择排序" class="header-anchor">#</a> 选择排序</h4> <ul><li>思路
+<ul><li>每次迭代，选择最大\最小的数放在一边</li></ul></li></ul> <h4 id="插入排序"><a href="#插入排序" class="header-anchor">#</a> 插入排序</h4> <ul><li>思路
+<ul><li>无序区选择一个，从后往前查找，插入有序区
+<ul><li>直接插入</li> <li>希尔插入</li></ul></li></ul></li></ul> <h4 id="归并排序"><a href="#归并排序" class="header-anchor">#</a> 归并排序</h4> <ul><li>思路
+<ul><li>分久必合</li></ul></li></ul> <h2 id="数组"><a href="#数组" class="header-anchor">#</a> 数组</h2> <ul><li>题目
+<ul><li><a href="https://leetcode-cn.com/problems/pascals-triangle/" target="_blank" rel="noopener noreferrer">118. 杨辉三角<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://leetcode-cn.com/problems/pascals-triangle-ii/" target="_blank" rel="noopener noreferrer">119. 杨辉三角 II<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://leetcode-cn.com/problems/image-smoother/" target="_blank" rel="noopener noreferrer">661. 图片平滑器<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h2 id="字符串"><a href="#字符串" class="header-anchor">#</a> 字符串</h2> <h2 id="哈希表"><a href="#哈希表" class="header-anchor">#</a> 哈希表</h2> <ul><li>题目
+<ul><li><a href="https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 35. 复杂链表的复制<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h2 id="数学"><a href="#数学" class="header-anchor">#</a> 数学</h2> <h2 id="回溯"><a href="#回溯" class="header-anchor">#</a> 回溯</h2> <h2 id="动态规划"><a href="#动态规划" class="header-anchor">#</a> 动态规划</h2> <ul><li>题目
+<ul><li><a href="https://leetcode-cn.com/problems/fibonacci-number/" target="_blank" rel="noopener noreferrer">509. 斐波那契数<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 42. 连续子数组的最大和<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 47. 礼物的最大价值<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h2 id="树"><a href="#树" class="header-anchor">#</a> 树</h2> <h2 id="贪心算法"><a href="#贪心算法" class="header-anchor">#</a> 贪心算法</h2> <ul><li>题目
+<ul><li><a href="https://leetcode-cn.com/problems/can-place-flowers/" target="_blank" rel="noopener noreferrer">605. 种花问题<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h2 id="dfs深度优先搜索"><a href="#dfs深度优先搜索" class="header-anchor">#</a> DFS深度优先搜索</h2> <ul><li>题目
+<ul><li><a href="https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 26. 树的子结构<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h2 id="bfs广度优先搜索"><a href="#bfs广度优先搜索" class="header-anchor">#</a> BFS广度优先搜索</h2> <ul><li>题目
+<ul><li><a href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 32 - I. 从上到下打印二叉树<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h2 id="栈和队列"><a href="#栈和队列" class="header-anchor">#</a> 栈和队列</h2> <ul><li>题目
+<ul><li><a href="https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 09. 用两个栈实现队列<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 30. 包含min函数的栈<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h2 id="滑动窗口"><a href="#滑动窗口" class="header-anchor">#</a> 滑动窗口</h2> <ul><li>题目
+<ul><li><a href="https://leetcode-cn.com/problems/maximum-sum-of-3-non-overlapping-subarrays/" target="_blank" rel="noopener noreferrer">689. 三个无重叠子数组的最大和<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h2 id="双指针"><a href="#双指针" class="header-anchor">#</a> 双指针</h2> <h2 id="二分查找"><a href="#二分查找" class="header-anchor">#</a> 二分查找</h2> <ul><li>题目
+<ul><li><a href="https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 11. 旋转数组的最小数字<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h2 id="二叉树"><a href="#二叉树" class="header-anchor">#</a> 二叉树</h2> <ul><li>题目
+<ul><li><a href="https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 04. 二维数组中的查找<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 32 - I. 从上到下打印二叉树<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h2 id="数据结构"><a href="#数据结构" class="header-anchor">#</a> 数据结构</h2> <h2 id="位运算"><a href="#位运算" class="header-anchor">#</a> 位运算</h2> <h2 id="前缀和"><a href="#前缀和" class="header-anchor">#</a> 前缀和</h2> <h2 id="查找表"><a href="#查找表" class="header-anchor">#</a> 查找表</h2> <h2 id="链表"><a href="#链表" class="header-anchor">#</a> 链表</h2> <ul><li>题目
+<ul><li><a href="https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 06. 从尾到头打印链表<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 24. 反转链表<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/" target="_blank" rel="noopener noreferrer">剑指 Offer 35. 复杂链表的复制<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <p>待刷题：</p> <p><strong>一. 数组</strong>
+题目分类	题目编号
+数组的遍历	<s>485、495、414、628</s>
+统计数组中的元素	<s>645、697、448、442、41、274</s>
+数组的改变、移动	<s>453、665、283</s>
+二维数组及滚动数组	<s>118、119、661、598</s>、419
+数组的旋转	189、396
+特定顺序遍历二维数组	54、59、498
+二维数组变换	566、48、73、289
+前缀和数组	303、304、238
+题解	数组篇
+<strong>二. 字符串</strong>
+题目分类	题目编号
+字符	<s>520</s>
+回文串的定义	<s>125</s>
+公共前缀	14
+单词	434、58
+字符串的反转	344、541、557、151
+字符的统计	387、389、383、242、49、451、423、657、551、696、467、535
+数字与字符串间转换	299、412、506、539、553、537、592、640、38、443、8、13、12、273、165、481
+子序列	392、524、521、522
+高精度运算	66、67、415、43、306
+字符串变换	482、6、68
+字符串匹配	28、686、459、214
+中心拓展法	5、647
+<strong>三. 数与位</strong>
+题目分类	题目编号
+数字的位操作	7、9、479、564、231、342、326、504、263、190、191、476、461、477、693、393、172、458、258、319、405、171、168、670、233、357、400
+简单数学题	492、29、507
+快速幂	50、372
+<strong>四. 栈与递归</strong>
+题目分类	题目编号
+用栈访问最后若干元素	682、71、388
+栈与计算器	150、227、224
+栈与括号匹配	20、636、591、32
+递归	385、341、394
+<strong>五. 链表</strong>
+题目分类	题目编号
+链表的删除	203、237、19
+链表的遍历	430
+链表的旋转与反转	61、24、206、92、25
+链表高精度加法	2、445
+链表的合并	21、23
+<strong>六. 哈希表</strong>
+题目分类	题目编号
+哈希表的查找、插入及删除	217、633、349、128、202、500、290、532、205、166、466、138
+哈希表与索引	1、167、599、219、220
+哈希表与统计	594、350、554、609、454、18
+哈希表与前缀和	560、523、525
+<strong>七. 贪心算法</strong>
+题目分类	题目编号
+数组与贪心算法	<s>605</s>、121、122、561、455、575、135、409、621、179、56、57、228、452、435、646、406、48、169、215、75、324、517、649、678、420
+子数组与贪心算法	53、134、581、152
+子序列与贪心算法	334、376、659
+数字与贪心	343
+单调栈法	496、503、456、316、402、321、84、85
+<strong>八. 双指针法</strong>
+题目分类	题目编号
+头尾指针	<s>345</s>、680、167、15、16、18、11、42
+同向双指针、滑动窗口	27、26、80、83、82、611、187、643、674、209、3、438、567、424、76、30
+分段双指针	86、328、160、88、475
+快慢指针	141、142、143、234、457、287
+<strong>九. 树</strong>
+题目分类	题目编号
+树与递归	100、222、101、226、437、563、617、508、572、543、654、687、87
+树的层次遍历	102、429、690、559、662、671、513、515、637、103、107、257、623、653、104、111、112、113、129、404、199、655、116、117
+树的前序遍历	144、589
+树的前序序列化	606、331、652、297、449
+树的后序遍历	145、590
+树的中序遍历与二叉搜索树	94、700、530、538、230、98、173、669、450、110、95、108、109
+重构二叉树	105、106
+二叉树的展开	114
+最近公共祖先	235、236
+Morris中序遍历	501、99
+四叉树	558、427
+<strong>十. 图与搜索</strong>
+题目分类	题目编号
+图的建立与应用	565
+深度优先搜索	17、397
+回溯法	526、401、36、37、51、52、77、39、216、40、46、47、31、556、60、491、78、90、79、93、332
+回溯法与表达式	241、282、679
+回溯法与括号	22、301
+回溯法与贪心	488
+广度优先搜索	133、200、695、463、542、130、417、529、127、126、433、675
+并查集	547、684、685
+拓扑排序	399、207、210
+有限状态自动机	65、468
+<strong>十一. 二分查找</strong>
+题目分类	题目编号
+二分查找应用(简单)	374、35、278、367、69、441
+二分查找应用(中等)	34、540、275、436、300、354、658、162、4
+二分查找与旋转数组	153、154、33、81
+二分查找与矩阵	74、240
+二分答案法	378、668、410、483
+<strong>十二. 二进制运算的应用</strong>
+题目分类	题目编号
+异或的应用	89、136、137、260、268
+与或非的应用	371、318、201
+<strong>十三. 动态规划</strong>
+题目分类	题目编号
+数组中的动态规划	509、70、338、45、55、198、213、650、91、639、552、123、188、309、32、264、313、403
+子数组、子序列中的动态规划	689、413、446、368、416、279
+背包问题	322、518、474、494、377
+矩阵中的动态规划	62、63、64、120、576、688、221、629、174、96、329
+动态规划与字符串匹配	583、72、97、115、516、132、131、139、140、514、10、44
+状态压缩动态规划	464、691、698、638、473
+区间中的动态规划	486、664、375、312、546
+树形dp	337、124
+数位dp	233、600
+<strong>十四. 数据结构</strong>
+题目分类	题目编号
+数据结构设计——栈与队列	225、232、284、622、641、155
+数据结构设计——哈希表	676、355、380、381
+数据结构设计——哈希与双向链表	432、146、460
+前缀树	208、211、648、386、677、472、421、212、336、440
+堆	23、373、378、632、347、692、502、630、407、295、480
+树状数组	307、315、493、327、673
+线段树	699
+平衡树(set/map)	352、218、363
+<strong>十五. 采样</strong>
+题目分类	题目编号
+按权值采样	528、497
+蓄水池抽样	382、398
+拒绝采样	470、478、519
+<strong>十六. 计算几何</strong>
+题目分类	题目编号
+计算几何基础	593、447、223、149
+分类讨论法	335
+凸包	587
+覆盖问题	391
+<strong>十七. 常用技巧与算法</strong>
+题目分类	题目编号
+博弈论	292
+分块	239、164
+倍增法	330
+拓展欧几里得算法	365
+洗牌算法	384
+找规律	390、672
+分治法	395、667
+排序算法	147、148
+线性筛	204
+摩尔投票法	229</p></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/kake-blog/browser/主流浏览器及其内核.html" class="prev">
+          主流浏览器及其内核
+        </a></span> <span class="next"><a href="/kake-blog/进阶/前端工程化.html">
+          前端工程化
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#排序" class="sidebar-link reco-side-排序" data-v-b57cc07c>排序</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#数组" class="sidebar-link reco-side-数组" data-v-b57cc07c>数组</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#字符串" class="sidebar-link reco-side-字符串" data-v-b57cc07c>字符串</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#哈希表" class="sidebar-link reco-side-哈希表" data-v-b57cc07c>哈希表</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#数学" class="sidebar-link reco-side-数学" data-v-b57cc07c>数学</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#回溯" class="sidebar-link reco-side-回溯" data-v-b57cc07c>回溯</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#动态规划" class="sidebar-link reco-side-动态规划" data-v-b57cc07c>动态规划</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#树" class="sidebar-link reco-side-树" data-v-b57cc07c>树</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#贪心算法" class="sidebar-link reco-side-贪心算法" data-v-b57cc07c>贪心算法</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#dfs深度优先搜索" class="sidebar-link reco-side-dfs深度优先搜索" data-v-b57cc07c>DFS深度优先搜索</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#bfs广度优先搜索" class="sidebar-link reco-side-bfs广度优先搜索" data-v-b57cc07c>BFS广度优先搜索</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#栈和队列" class="sidebar-link reco-side-栈和队列" data-v-b57cc07c>栈和队列</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#滑动窗口" class="sidebar-link reco-side-滑动窗口" data-v-b57cc07c>滑动窗口</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#双指针" class="sidebar-link reco-side-双指针" data-v-b57cc07c>双指针</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#二分查找" class="sidebar-link reco-side-二分查找" data-v-b57cc07c>二分查找</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#二叉树" class="sidebar-link reco-side-二叉树" data-v-b57cc07c>二叉树</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#数据结构" class="sidebar-link reco-side-数据结构" data-v-b57cc07c>数据结构</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#位运算" class="sidebar-link reco-side-位运算" data-v-b57cc07c>位运算</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#前缀和" class="sidebar-link reco-side-前缀和" data-v-b57cc07c>前缀和</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#查找表" class="sidebar-link reco-side-查找表" data-v-b57cc07c>查找表</a></li><li class="level-2" data-v-b57cc07c><a href="/kake-blog/%E8%BF%9B%E9%98%B6/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95.html#链表" class="sidebar-link reco-side-链表" data-v-b57cc07c>链表</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/kake-blog/assets/js/app.ba41769d.js" defer></script><script src="/kake-blog/assets/js/3.e126f458.js" defer></script><script src="/kake-blog/assets/js/1.f474e8b5.js" defer></script><script src="/kake-blog/assets/js/29.07ed6977.js" defer></script>
+  </body>
+</html>
